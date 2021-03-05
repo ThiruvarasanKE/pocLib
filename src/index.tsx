@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, Image } from 'react-native';
 
 export interface WelcomeData {
   name: string,
   enthusiasmLevel?: number;
 }
 
-const WelcomeComponent: React.FC<WelcomeData> = (props) => {
+const WelcomeComponent: React.FC<WelcomeData> = (props: any) => {
   const [name, setName] = React.useState(
     props.name
   );
@@ -14,6 +14,7 @@ const WelcomeComponent: React.FC<WelcomeData> = (props) => {
     props.enthusiasmLevel
   );
 
+  const image = require('./assets/bottom_gif.gif');
 
   const onIncrement = () =>
     setEnthusiasmLevel((enthusiasmLevel || 0) + 1);
@@ -27,6 +28,7 @@ const WelcomeComponent: React.FC<WelcomeData> = (props) => {
     Array(numChars + 1).join('!');
   return (
     <View style={styles.root}>
+      <Image source={image} style={styles.topSide} />
       <Text style={styles.greeting}>
         Hello{' '}
         {name + getExclamationMarks(enthusiasmLevel || 0)}
@@ -86,6 +88,12 @@ const styles = StyleSheet.create({
     width: '80%',
     fontSize: 13,
     fontWeight: '600'
+},
+topSide: {
+  alignSelf: 'center',
+  height: 100,
+  width: 100,
+  zIndex: 1,
 },
 });
 export default WelcomeComponent;
