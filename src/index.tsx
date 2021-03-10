@@ -16,7 +16,7 @@ const WelcomeComponent: React.FC<WelcomeData> = (props: any) => {
   const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
     props.enthusiasmLevel
   );
-  const [list, setList] = React.useState(
+  const [list] = React.useState(
     props.list
   );
 
@@ -52,7 +52,7 @@ const WelcomeComponent: React.FC<WelcomeData> = (props: any) => {
         <Text style={styles.greeting}>{"Description about " + name}</Text>
         {list && list.length > 0 ?
           <FlatList data={list}
-            renderItem={({ item, index }) =>
+            renderItem={({ item }) =>
               <Text style={styles.description}>{"+ " + item}</Text>
             }
           /> : <Text style={styles.noData}>No Data Found</Text>}
