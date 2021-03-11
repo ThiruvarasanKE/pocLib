@@ -15,8 +15,8 @@ import WelcomeComponent from 'react-native-poc-lib';
 
 // ...
 
-<WelcomeComponent name={"Sample"} enthusiasmLevel={0} 
-        list={[ "I'm a loaner","I love cakes","I'm a motivative guy"]}/>
+<WelcomeComponent name={name} enthusiasmLevel={level} 
+        list={list}/>
 ```
 
 ## Contributing
