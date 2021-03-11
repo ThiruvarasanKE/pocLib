@@ -5,17 +5,18 @@ ProofProj
 ## Installation
 
 ```sh
-npm install react-native-poc-lib
+npm install git://github.com/ThiruvarasanKE/pocLib.git#master
 ```
 
 ## Usage
 
 ```js
-import PocLib from "react-native-poc-lib";
+import WelcomeComponent from 'react-native-poc-lib';
 
 // ...
 
-const result = await PocLib.multiply(3, 7);
+<WelcomeComponent name={"Sample"} enthusiasmLevel={0} 
+        list={[ "I'm a loaner","I love cakes","I'm a motivative guy"]}/>
 ```
 
 ## Contributing
