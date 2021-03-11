@@ -5,7 +5,7 @@ ProofProj
 ## Installation
 
 ```sh
-npm install git://github.com/ThiruvarasanKE/pocLib.git#master
+npm install react-native-poc-lib
 ```
 
 ## Usage
